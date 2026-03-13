@@ -1,0 +1,60 @@
+{
+  "name": "@one-kash/sap-atc-checker",
+  "version": "1.0.0",
+  "description": "SAP ATC (ABAP Test Cockpit) Checker - Claude Code Skill for running ATC checks with any check variant",
+  "type": "module",
+  "main": "run-atc-check.ts",
+  "bin": {
+    "sap-atc-check": "./run-atc-check.ts"
+  },
+  "scripts": {
+    "check": "node --import tsx run-atc-check.ts",
+    "batch": "node --import tsx batch-atc-parallel.ts",
+    "variants": "node --import tsx list-check-variants.ts",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"*.ts\"",
+    "format:check": "prettier --check \"*.ts\"",
+    "audit": "npm audit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:all": "npm run type-check && npm run test && npm run lint && npm run format:check && npm audit --audit-level=high"
+  },
+  "keywords": [
+    "sap",
+    "abap",
+    "atc",
+    "code-quality",
+    "claude-code",
+    "check-variant"
+  ],
+  "author": "one-kash",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openkash/sap-atc-checker.git"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.7",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/xml2js": "^0.4.14",
+    "@typescript-eslint/eslint-plugin": "^8.46.4",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "tsx": "^4.20.0",
+    "typescript": "^5.0.0",
+    "vitest": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

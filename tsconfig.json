@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    // Module system
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "lib": ["ES2022"],
+
+    // Import handling
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+
+    // Type checking
+    "strict": false,
+    "skipLibCheck": true,
+    "noEmit": true,
+
+    // Module detection
+    "moduleDetection": "force",
+
+    // Path resolution
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*"]
+    }
+  },
+  "include": [
+    "*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "legacy"
+  ]
+}

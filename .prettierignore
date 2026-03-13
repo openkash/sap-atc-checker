@@ -1,0 +1,8 @@
+node_modules/
+legacy/
+output/
+*.md
+package.json
+package-lock.json
+tsconfig.json
+.eslintrc.json
